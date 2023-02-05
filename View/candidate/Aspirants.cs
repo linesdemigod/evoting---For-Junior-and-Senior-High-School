@@ -39,11 +39,17 @@ namespace Evoting.View.candidate
 
             foreach (var record in candidate.data)
             {
-                
+
                 Button btn = new Button()
                 {
                     Text = record.Item2,
-                    Size = new Size(75, 23),
+                    Size = new Size(100, 40),
+                    BackColor = ColorTranslator.FromHtml("#A7907D"),
+                    ForeColor = Color.White,
+                    Cursor = Cursors.Hand,
+                    FlatStyle = FlatStyle.Flat,
+                    Font = new Font("Century Gothic", 11.0F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0))),
+
                     Tag = record.Item1
                 };
 

@@ -76,13 +76,22 @@ namespace Evoting
 
             if (verify)
             {
-                Login_id = user.id;
-                Login_name = user.name;
-                Login_status = user.status;
 
-                SplashScreen load = new SplashScreen();
-                load.Show();
-                Hide();
+                if (user.status == "1")
+                {
+                    MessageBox.Show("Please you have already Voted");
+                }
+                else
+                {
+                    Login_id = user.id;
+                    Login_name = user.name;
+                    Login_status = user.status;
+
+                    SplashScreen load = new SplashScreen();
+                    load.Show();
+                    Hide();
+
+                }
 
 
             }

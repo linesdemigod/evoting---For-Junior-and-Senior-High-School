@@ -217,10 +217,6 @@ namespace Evoting.View.cadidate
             search();
         }
 
-        private void btnAspirants_Click(object sender, EventArgs e)
-        {
-            Aspirants user = new Aspirants();
-            user.ShowDialog();
-        }
+        
     }
 }

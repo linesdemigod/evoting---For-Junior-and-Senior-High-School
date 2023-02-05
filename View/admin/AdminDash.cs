@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Evoting.View.candidate;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -102,6 +103,8 @@ namespace Evoting.View.admin
             user.Show();
         }
 
+        
+
         private void btnLogout_Click(object sender, EventArgs e)
         {
             DialogResult confirm = MessageBox.Show("Are you sure you want to logout? ", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -113,6 +116,12 @@ namespace Evoting.View.admin
                 Hide();
 
             }
+        }
+
+        private void btnAspirant_Click(object sender, EventArgs e)
+        {
+            Aspirants user = new Aspirants();
+            user.ShowDialog();
         }
     }
 }

@@ -104,6 +104,7 @@
     <Compile Include="Model\Elections.cs" />
     <Compile Include="Model\Groups.cs" />
     <Compile Include="Model\Voters.cs" />
+    <Compile Include="Model\Votes.cs" />
     <Compile Include="View\admin\AdminDash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +161,12 @@
     <Compile Include="View\splashscreen\SplashScreen.Designer.cs">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\student\VoteControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\student\VoteControl.Designer.cs">
+      <DependentUpon>VoteControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\student\VoterDash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -207,6 +214,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\splashscreen\SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\student\VoteControl.resx">
+      <DependentUpon>VoteControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\student\VoterDash.resx">
       <DependentUpon>VoterDash.cs</DependentUpon>

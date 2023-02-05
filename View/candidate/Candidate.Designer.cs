@@ -32,9 +32,17 @@
             this.kryptonLabel7 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.txtSearch = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.dataGridViewCandidate = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
+            this.CandidateID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CandidateName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CandidatePicture = new System.Windows.Forms.DataGridViewImageColumn();
+            this.CandidateParty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CandidateElection = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ClassCreatedAt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ClassUpdatedAt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ClassUpdate = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.ClassDelete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.kryptonGroupBox1 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnAspirants = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnBrowse = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonLabel4 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.comboPosition = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
@@ -47,15 +55,6 @@
             this.txtName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.btnCancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.CandidateID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CandidateName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CandidatePicture = new System.Windows.Forms.DataGridViewImageColumn();
-            this.CandidateParty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CandidateElection = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ClassCreatedAt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ClassUpdatedAt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ClassUpdate = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.ClassDelete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCandidate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).BeginInit();
@@ -142,6 +141,86 @@
             this.dataGridViewCandidate.TabIndex = 227;
             this.dataGridViewCandidate.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCandidate_CellContentClick);
             // 
+            // CandidateID
+            // 
+            this.CandidateID.DataPropertyName = "id";
+            this.CandidateID.HeaderText = "ID";
+            this.CandidateID.MinimumWidth = 6;
+            this.CandidateID.Name = "CandidateID";
+            this.CandidateID.ReadOnly = true;
+            this.CandidateID.Visible = false;
+            this.CandidateID.Width = 125;
+            // 
+            // CandidateName
+            // 
+            this.CandidateName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.CandidateName.DataPropertyName = "name";
+            this.CandidateName.HeaderText = "Name";
+            this.CandidateName.MinimumWidth = 6;
+            this.CandidateName.Name = "CandidateName";
+            this.CandidateName.ReadOnly = true;
+            this.CandidateName.Width = 73;
+            // 
+            // CandidatePicture
+            // 
+            this.CandidatePicture.DataPropertyName = "picture";
+            this.CandidatePicture.HeaderText = "Picture";
+            this.CandidatePicture.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.CandidatePicture.Name = "CandidatePicture";
+            this.CandidatePicture.ReadOnly = true;
+            // 
+            // CandidateParty
+            // 
+            this.CandidateParty.DataPropertyName = "party";
+            this.CandidateParty.HeaderText = "Party";
+            this.CandidateParty.Name = "CandidateParty";
+            this.CandidateParty.ReadOnly = true;
+            // 
+            // CandidateElection
+            // 
+            this.CandidateElection.DataPropertyName = "Position";
+            this.CandidateElection.HeaderText = "Position";
+            this.CandidateElection.Name = "CandidateElection";
+            this.CandidateElection.ReadOnly = true;
+            // 
+            // ClassCreatedAt
+            // 
+            this.ClassCreatedAt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.ClassCreatedAt.DataPropertyName = "created_at";
+            this.ClassCreatedAt.HeaderText = "Created At";
+            this.ClassCreatedAt.MinimumWidth = 6;
+            this.ClassCreatedAt.Name = "ClassCreatedAt";
+            this.ClassCreatedAt.ReadOnly = true;
+            // 
+            // ClassUpdatedAt
+            // 
+            this.ClassUpdatedAt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.ClassUpdatedAt.DataPropertyName = "updated_at";
+            this.ClassUpdatedAt.HeaderText = "Updated At";
+            this.ClassUpdatedAt.Name = "ClassUpdatedAt";
+            this.ClassUpdatedAt.ReadOnly = true;
+            this.ClassUpdatedAt.Width = 103;
+            // 
+            // ClassUpdate
+            // 
+            this.ClassUpdate.HeaderText = "Update";
+            this.ClassUpdate.MinimumWidth = 6;
+            this.ClassUpdate.Name = "ClassUpdate";
+            this.ClassUpdate.ReadOnly = true;
+            this.ClassUpdate.Text = "Update";
+            this.ClassUpdate.UseColumnTextForButtonValue = true;
+            this.ClassUpdate.Width = 125;
+            // 
+            // ClassDelete
+            // 
+            this.ClassDelete.HeaderText = "Delete";
+            this.ClassDelete.MinimumWidth = 6;
+            this.ClassDelete.Name = "ClassDelete";
+            this.ClassDelete.ReadOnly = true;
+            this.ClassDelete.Text = "Delete";
+            this.ClassDelete.UseColumnTextForButtonValue = true;
+            this.ClassDelete.Width = 125;
+            // 
             // kryptonGroupBox1
             // 
             this.kryptonGroupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -161,7 +240,6 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.btnAspirants);
             this.panel2.Controls.Add(this.btnBrowse);
             this.panel2.Controls.Add(this.kryptonLabel4);
             this.panel2.Controls.Add(this.comboPosition);
@@ -180,56 +258,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(779, 198);
             this.panel2.TabIndex = 305;
-            // 
-            // btnAspirants
-            // 
-            this.btnAspirants.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAspirants.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAspirants.Location = new System.Drawing.Point(543, 144);
-            this.btnAspirants.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAspirants.Name = "btnAspirants";
-            this.btnAspirants.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(150)))), ((int)(((byte)(180)))));
-            this.btnAspirants.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(150)))), ((int)(((byte)(180)))));
-            this.btnAspirants.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnAspirants.OverrideDefault.Border.Rounding = 6;
-            this.btnAspirants.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.btnAspirants.OverrideDefault.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.btnAspirants.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAspirants.OverrideFocus.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(150)))), ((int)(((byte)(180)))));
-            this.btnAspirants.OverrideFocus.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(150)))), ((int)(((byte)(180)))));
-            this.btnAspirants.OverrideFocus.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnAspirants.OverrideFocus.Border.Rounding = 6;
-            this.btnAspirants.OverrideFocus.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.btnAspirants.OverrideFocus.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.btnAspirants.OverrideFocus.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAspirants.Size = new System.Drawing.Size(150, 39);
-            this.btnAspirants.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(150)))), ((int)(((byte)(180)))));
-            this.btnAspirants.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(150)))), ((int)(((byte)(180)))));
-            this.btnAspirants.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnAspirants.StateCommon.Border.Rounding = 6;
-            this.btnAspirants.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.btnAspirants.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.btnAspirants.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAspirants.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(150)))), ((int)(((byte)(180)))));
-            this.btnAspirants.StateDisabled.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(150)))), ((int)(((byte)(180)))));
-            this.btnAspirants.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(150)))), ((int)(((byte)(180)))));
-            this.btnAspirants.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(150)))), ((int)(((byte)(180)))));
-            this.btnAspirants.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnAspirants.StatePressed.Border.Rounding = 6;
-            this.btnAspirants.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.btnAspirants.StatePressed.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.btnAspirants.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAspirants.TabIndex = 235;
-            this.btnAspirants.Values.Text = "View Aspirants";
-            this.btnAspirants.Click += new System.EventHandler(this.btnAspirants_Click);
             // 
             // btnBrowse
             // 
@@ -521,86 +549,6 @@
             this.btnCancel.Values.Text = "Cancel";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // CandidateID
-            // 
-            this.CandidateID.DataPropertyName = "id";
-            this.CandidateID.HeaderText = "ID";
-            this.CandidateID.MinimumWidth = 6;
-            this.CandidateID.Name = "CandidateID";
-            this.CandidateID.ReadOnly = true;
-            this.CandidateID.Visible = false;
-            this.CandidateID.Width = 125;
-            // 
-            // CandidateName
-            // 
-            this.CandidateName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.CandidateName.DataPropertyName = "name";
-            this.CandidateName.HeaderText = "Name";
-            this.CandidateName.MinimumWidth = 6;
-            this.CandidateName.Name = "CandidateName";
-            this.CandidateName.ReadOnly = true;
-            this.CandidateName.Width = 73;
-            // 
-            // CandidatePicture
-            // 
-            this.CandidatePicture.DataPropertyName = "picture";
-            this.CandidatePicture.HeaderText = "Picture";
-            this.CandidatePicture.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.CandidatePicture.Name = "CandidatePicture";
-            this.CandidatePicture.ReadOnly = true;
-            // 
-            // CandidateParty
-            // 
-            this.CandidateParty.DataPropertyName = "party";
-            this.CandidateParty.HeaderText = "Party";
-            this.CandidateParty.Name = "CandidateParty";
-            this.CandidateParty.ReadOnly = true;
-            // 
-            // CandidateElection
-            // 
-            this.CandidateElection.DataPropertyName = "Position";
-            this.CandidateElection.HeaderText = "Position";
-            this.CandidateElection.Name = "CandidateElection";
-            this.CandidateElection.ReadOnly = true;
-            // 
-            // ClassCreatedAt
-            // 
-            this.ClassCreatedAt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.ClassCreatedAt.DataPropertyName = "created_at";
-            this.ClassCreatedAt.HeaderText = "Created At";
-            this.ClassCreatedAt.MinimumWidth = 6;
-            this.ClassCreatedAt.Name = "ClassCreatedAt";
-            this.ClassCreatedAt.ReadOnly = true;
-            // 
-            // ClassUpdatedAt
-            // 
-            this.ClassUpdatedAt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.ClassUpdatedAt.DataPropertyName = "updated_at";
-            this.ClassUpdatedAt.HeaderText = "Updated At";
-            this.ClassUpdatedAt.Name = "ClassUpdatedAt";
-            this.ClassUpdatedAt.ReadOnly = true;
-            this.ClassUpdatedAt.Width = 103;
-            // 
-            // ClassUpdate
-            // 
-            this.ClassUpdate.HeaderText = "Update";
-            this.ClassUpdate.MinimumWidth = 6;
-            this.ClassUpdate.Name = "ClassUpdate";
-            this.ClassUpdate.ReadOnly = true;
-            this.ClassUpdate.Text = "Update";
-            this.ClassUpdate.UseColumnTextForButtonValue = true;
-            this.ClassUpdate.Width = 125;
-            // 
-            // ClassDelete
-            // 
-            this.ClassDelete.HeaderText = "Delete";
-            this.ClassDelete.MinimumWidth = 6;
-            this.ClassDelete.Name = "ClassDelete";
-            this.ClassDelete.ReadOnly = true;
-            this.ClassDelete.Text = "Delete";
-            this.ClassDelete.UseColumnTextForButtonValue = true;
-            this.ClassDelete.Width = 125;
-            // 
             // Candidate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -646,7 +594,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox comboPosition;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel7;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtSearch;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton btnAspirants;
         private System.Windows.Forms.DataGridViewTextBoxColumn CandidateID;
         private System.Windows.Forms.DataGridViewTextBoxColumn CandidateName;
         private System.Windows.Forms.DataGridViewImageColumn CandidatePicture;

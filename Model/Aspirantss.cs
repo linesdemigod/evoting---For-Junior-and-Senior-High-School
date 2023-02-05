@@ -9,7 +9,7 @@ namespace Evoting.Model
 {
     class Aspirantss : Database
     {
-        public List<Tuple<string, string, byte[], string, string>> records = new List<Tuple<string, string, byte[], string, string>>();
+        public List<Tuple<string, string, byte[], string, string, string>> records = new List<Tuple<string, string, byte[], string, string, string>>();
         public List<Tuple<string, string>> data = new List<Tuple<string, string>>();
         public string id { get; set; }
 
@@ -22,7 +22,7 @@ namespace Evoting.Model
             {
                 try
                 {
-                    cmd.CommandText = "SELECT candidate.id, candidate.name, candidate.picture, candidate.party, election.type AS Position, candidate.created_at, candidate.updated_at FROM candidate INNER JOIN election ON election.id = candidate.election_id WHERE election.id = @id ORDER BY Position DESC";
+                    cmd.CommandText = "SELECT candidate.id, candidate.name, candidate.picture, candidate.party, election.type AS Position, election.id AS PositionID FROM candidate INNER JOIN election ON election.id = candidate.election_id WHERE election.id = @id ORDER BY Position DESC";
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.Connection = conn;
                     cmd.Parameters.Add("@id", MySqlDbType.VarChar).Value = id;
@@ -35,8 +35,9 @@ namespace Evoting.Model
                         byte[] imageData = (byte[])rd["picture"];
                         string party = rd.GetString("party");
                         string position = rd.GetString("position");
+                        string positionID = rd.GetString("PositionID");
 
-                        records.Add(new Tuple<string, string, byte[], string, string>(id, name, imageData, party, position));
+                        records.Add(new Tuple<string, string, byte[], string, string,string>(id, name, imageData, party, position, positionID));
                     }
                 }
                 finally
