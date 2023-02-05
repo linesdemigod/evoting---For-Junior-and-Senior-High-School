@@ -84,15 +84,6 @@ namespace Evoting.Model
 
         }
 
-        //string sql = "SELECT user.name as staff, bank.description AS description, bank.deposit as deposit,  bank.withdrawal as withdrawal, bank.date AS date, bank.created_at AS time FROM bank INNER JOIN user ON user.id = bank.user_id WHERE Year(bank.created_at) = @year ORDER BY bank.id DESC";
-        //MySqlCommand selectCMD = new MySqlCommand(sql, conn);
-        //MySqlDataAdapter dta = new MySqlDataAdapter
-        //{
-        //    SelectCommand = selectCMD
-        //};
-        //selectCMD.Parameters.Add("@year", MySqlDbType.VarChar).Value = getYear;
-        //    conn.Close();
-        //    dta.Fill(ds);
-        //    dt = ds.Tables[0];
+       
     }
 }

@@ -81,6 +81,7 @@
       <HintPath>packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -103,6 +104,7 @@
     <Compile Include="Model\Database.cs" />
     <Compile Include="Model\Elections.cs" />
     <Compile Include="Model\Groups.cs" />
+    <Compile Include="Model\Reports.cs" />
     <Compile Include="Model\Voters.cs" />
     <Compile Include="Model\Votes.cs" />
     <Compile Include="View\admin\AdminDash.cs">
@@ -154,6 +156,12 @@
     </Compile>
     <Compile Include="View\group\Group.Designer.cs">
       <DependentUpon>Group.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\report\Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\report\Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
     </Compile>
     <Compile Include="View\splashscreen\SplashScreen.cs">
       <SubType>Form</SubType>
@@ -211,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\group\Group.resx">
       <DependentUpon>Group.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\report\Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\splashscreen\SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>

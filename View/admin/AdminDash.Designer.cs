@@ -134,7 +134,7 @@
             this.btnReport.TabIndex = 3;
             this.btnReport.Text = "Report";
             this.btnReport.UseVisualStyleBackColor = true;
-            this.btnReport.Click += new System.EventHandler(this.btnLogout_Click);
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // panel8
             // 

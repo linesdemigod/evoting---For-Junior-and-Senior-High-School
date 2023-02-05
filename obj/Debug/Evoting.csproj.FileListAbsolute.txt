@@ -45,3 +45,4 @@ C:\Users\Banks\source\repos\Evoting\obj\Debug\Evoting.View.auth.Profile.resource
 C:\Users\Banks\source\repos\Evoting\obj\Debug\Evoting.View.controls.Candidate.resources
 C:\Users\Banks\source\repos\Evoting\obj\Debug\Evoting.View.candidate.Aspirants.resources
 C:\Users\Banks\source\repos\Evoting\obj\Debug\Evoting.View.student.VoteControl.resources
+C:\Users\Banks\source\repos\Evoting\obj\Debug\Evoting.View.report.Report.resources

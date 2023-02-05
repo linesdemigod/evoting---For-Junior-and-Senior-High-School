@@ -123,5 +123,11 @@ namespace Evoting.View.admin
             Aspirants user = new Aspirants();
             user.ShowDialog();
         }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            report.Report user = new report.Report();
+            user.ShowDialog();
+        }
     }
 }
