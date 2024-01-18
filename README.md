@@ -1,1 +1,1 @@
-#This is Evoting is based on .NET Framework
+This is Evoting is based on .NET Framework
